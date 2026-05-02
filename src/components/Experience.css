@@ -1,0 +1,233 @@
+.experience-section { position: relative; overflow: hidden; }
+.exp-orb {
+  width: 400px; height: 400px;
+  background: radial-gradient(circle, rgba(108,99,255,0.1) 0%, transparent 70%);
+  left: -150px; bottom: 0; position: absolute;
+}
+
+.exp-layout {
+  display: grid;
+  grid-template-columns: 280px 1fr;
+  gap: 32px;
+  margin-top: 48px;
+}
+
+/* Tabs */
+.exp-tabs { display: flex; flex-direction: column; gap: 8px; }
+.exp-tab {
+  text-align: left;
+  background: var(--bg-card);
+  border: 1px solid var(--border);
+  border-radius: var(--radius);
+  padding: 16px 18px;
+  cursor: pointer;
+  transition: var(--transition);
+  position: relative;
+}
+.exp-tab:hover { border-color: rgba(108,99,255,0.3); }
+.exp-tab.active {
+  border-color: var(--accent);
+  background: rgba(108,99,255,0.08);
+  box-shadow: 0 0 0 1px rgba(108,99,255,0.3) inset;
+}
+.exp-tab.active::before {
+  content: '';
+  position: absolute;
+  left: 0; top: 50%;
+  transform: translateY(-50%);
+  width: 3px; height: 50%;
+  background: var(--accent);
+  border-radius: 0 2px 2px 0;
+}
+.exp-tab-company {
+  font-family: var(--font-display);
+  font-size: 0.85rem; font-weight: 700;
+  color: var(--text-primary);
+  margin-bottom: 4px;
+}
+.exp-tab-period {
+  font-size: 0.72rem;
+  color: var(--text-muted);
+}
+.exp-tab-badge {
+  position: absolute; top: 12px; right: 12px;
+  background: rgba(0,230,118,0.12);
+  color: #00e676;
+  font-size: 0.62rem; font-weight: 700;
+  padding: 2px 8px;
+  border-radius: 100px;
+  border: 1px solid rgba(0,230,118,0.25);
+  text-transform: uppercase; letter-spacing: 1px;
+}
+
+.exp-edu-card {
+  margin-top: 16px;
+  background: var(--bg-card);
+  border: 1px solid var(--border);
+  border-radius: var(--radius);
+  padding: 16px 18px;
+}
+.exp-edu-title {
+  font-size: 0.68rem;
+  text-transform: uppercase; letter-spacing: 2px;
+  color: var(--text-muted);
+  font-weight: 700;
+  margin-bottom: 14px;
+}
+.exp-edu-item { margin-bottom: 12px; }
+.exp-edu-item:last-child { margin-bottom: 0; }
+.edu-degree {
+  font-size: 0.85rem; font-weight: 600;
+  color: var(--text-primary);
+}
+.edu-school {
+  font-size: 0.78rem;
+  color: var(--text-secondary);
+}
+.edu-year {
+  font-size: 0.72rem;
+  color: var(--text-muted);
+}
+
+/* Detail */
+.exp-detail {
+  background: var(--bg-card);
+  border: 1px solid var(--border);
+  border-radius: var(--radius-lg);
+  padding: 32px;
+  animation: fadeIn 0.3s ease;
+}
+
+.exp-detail-header {
+  display: flex; justify-content: space-between; align-items: flex-start;
+  margin-bottom: 16px; flex-wrap: wrap; gap: 12px;
+}
+.exp-detail-role {
+  font-family: var(--font-display);
+  font-size: 1.4rem; font-weight: 800;
+  color: var(--text-primary);
+  margin-bottom: 6px;
+}
+.exp-detail-meta {
+  display: flex; align-items: center; gap: 8px;
+  font-size: 0.88rem;
+}
+.exp-company { color: var(--accent); font-weight: 600; }
+.exp-dot { color: var(--text-muted); }
+.exp-location { color: var(--text-muted); }
+
+.exp-period-badge {
+  display: flex; align-items: center; gap: 8px;
+  background: rgba(255,255,255,0.04);
+  border: 1px solid var(--border);
+  padding: 8px 14px;
+  border-radius: 8px;
+  font-size: 0.8rem;
+  color: var(--text-secondary);
+  white-space: nowrap;
+}
+.exp-status {
+  width: 7px; height: 7px;
+  border-radius: 50%;
+  background: var(--text-muted);
+}
+.exp-status.current {
+  background: #00e676;
+  box-shadow: 0 0 8px #00e676;
+  animation: pulse 2s infinite;
+}
+
+.exp-description {
+  color: var(--text-secondary);
+  font-size: 0.93rem;
+  line-height: 1.7;
+  margin-bottom: 24px;
+  padding-bottom: 24px;
+  border-bottom: 1px solid var(--border);
+}
+
+.exp-achievements-title {
+  font-family: var(--font-display);
+  font-size: 0.75rem;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  color: var(--text-muted);
+  font-weight: 700;
+  margin-bottom: 16px;
+}
+.exp-achievement {
+  display: flex; gap: 12px; align-items: flex-start;
+  margin-bottom: 12px;
+}
+.exp-achievement-dot {
+  width: 6px; height: 6px;
+  border-radius: 50%;
+  background: var(--accent);
+  margin-top: 7px;
+  flex-shrink: 0;
+}
+.exp-achievement p {
+  font-size: 0.88rem;
+  color: var(--text-secondary);
+  line-height: 1.6;
+}
+
+.exp-tech-wrap {
+  margin-top: 24px;
+  padding-top: 20px;
+  border-top: 1px solid var(--border);
+}
+.exp-tech-label {
+  font-size: 0.68rem;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  color: var(--text-muted);
+  font-weight: 700;
+  margin-bottom: 12px;
+}
+.exp-tech-tags { display: flex; flex-wrap: wrap; gap: 8px; }
+.exp-tech-tag {
+  background: rgba(108,99,255,0.08);
+  border: 1px solid rgba(108,99,255,0.2);
+  color: var(--accent);
+  font-size: 0.78rem; font-weight: 600;
+  padding: 4px 12px;
+  border-radius: 6px;
+}
+
+/* Certs */
+.certs-section { margin-top: 60px; }
+.certs-title {
+  font-family: var(--font-display);
+  font-size: 0.75rem;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  color: var(--text-muted);
+  font-weight: 700;
+  margin-bottom: 16px;
+}
+.certs-grid { display: flex; gap: 16px; flex-wrap: wrap; }
+.cert-card {
+  display: flex; align-items: center; gap: 14px;
+  background: var(--bg-card);
+  border: 1px solid var(--border);
+  border-radius: var(--radius);
+  padding: 16px 20px;
+  transition: var(--transition);
+  flex: 1; min-width: 200px;
+}
+.cert-card:hover { border-color: var(--border-bright); }
+.cert-icon { font-size: 1.5rem; }
+.cert-name {
+  font-size: 0.88rem; font-weight: 600;
+  color: var(--text-primary);
+  margin-bottom: 2px;
+}
+.cert-year { font-size: 0.75rem; color: var(--text-muted); }
+
+@media (max-width: 850px) {
+  .exp-layout { grid-template-columns: 1fr; }
+  .exp-tabs { flex-direction: row; overflow-x: auto; padding-bottom: 4px; }
+  .exp-tab { min-width: 180px; }
+  .exp-edu-card { display: none; }
+}
