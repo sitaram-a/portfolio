@@ -5,7 +5,7 @@ import './Hero.css';
 const FALLBACK = {
   full_name: 'Sitaram Hembrom',
   title: 'Senior Frontend Developer & Full-Stack Modernisation Specialist',
-  about_1: 'Frontend developer with 4+ years delivering measurable outcomes on high-traffic, revenue-critical web products.',
+  about_1: 'Frontend developer with 5+ years delivering measurable outcomes on high-traffic, revenue-critical web products.',
   stat_1_value:'40%', stat_1_label:'Faster Page Loads',
   stat_2_value:'30%', stat_2_label:'Engagement Lift',
   stat_3_value:'35%', stat_3_label:'Dev Time Saved',
